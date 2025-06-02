@@ -1250,17 +1250,6 @@ if sections == "Game Genre Prediction Demo":
 
     # ======================================================
     # Initialize a lemmatizer and Stopwords
-    # import nltk
-    # from nltk.corpus import stopwords
-    # from string import punctuation
-
-    # # Versuche, 'stopwords' zu laden – lade sie bei Fehler herunter
-    # try:
-    #     stop_words = set(stopwords.words('english')).union(set(punctuation), {"game", "games", 'one'})
-    # except LookupError:
-    #     nltk.download('stopwords')
-    #     stop_words = set(stopwords.words('english')).union(set(punctuation), {"game", "games", 'one'})
-
     wordnet_lemmatizer = WordNetLemmatizer()
     stop_words = set(stopwords.words('english')).union(set(punctuation), {"game", "games", 'one'})
 
