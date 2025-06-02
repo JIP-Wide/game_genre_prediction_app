@@ -1,0 +1,8 @@
+**The word cloud for raw reviews:**
+
+In the raw reviews, words like **"game"**, **"time"**, **"story"**, **"play"**, and **"fun"** dominate, reflecting a general focus on gaming and enjoyment. Generic terms like **"one"**, **"even"**, **"want"**, and **"now"** add noise without offering much insight. Non-standard words, punctuation, and references to specific game titles further dilute clarity. Overall, the raw reviews lack depth, with dominant words broadly describing the gaming experience rather than focusing on action-specific elements.
+  
+  
+**The word cloud for preprocessed reviews:**
+
+In the preprocessed reviews, the focus shifts to more meaningful terms like **"character"**, **"story"**, **"fun"**, **"time"**, **"mission"**, and **"combat"**, highlighting key elements of action games. Words like "mission", **"combat"**, **"level"**, and **"graphic"** emphasize gameplay, while terms like **"great"**, **"fun"**, and **"better"** reflect player satisfaction. The processed text eliminates noise and focuses on genre-specific insights, with **"combat"** and **"mission"** standing out as defining features of the action gaming experience.

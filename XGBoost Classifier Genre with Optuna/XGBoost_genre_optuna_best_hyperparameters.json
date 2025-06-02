@@ -1,0 +1,1 @@
+{"max_depth": 7, "learning_rate": 0.22089167770630735, "subsample": 0.8696127594649752, "colsample_bytree": 0.8137648041273499, "gamma": 0.0013854383298220786, "lambda": 0.12921581196059778, "alpha": 0.08250414801599207, "objective": "multi:softprob", "num_class": 12, "eval_metric": "mlogloss", "tree_method": "hist", "device": "cuda", "seed": 48}

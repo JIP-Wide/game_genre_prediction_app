@@ -1,0 +1,1 @@
+{"max_depth": 7, "learning_rate": 0.059195052462552175, "subsample": 0.7786830038841226, "colsample_bytree": 0.9989602945971138, "gamma": 0.007022681181370751, "lambda": 0.5274930542194014, "alpha": 0.0026598908879735123, "n_estimators": 250, "objective": "multi:softprob", "num_class": 12, "eval_metric": "mlogloss", "tree_method": "gpu_hist", "device": "cuda"}

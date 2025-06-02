@@ -1,0 +1,8 @@
+**The word cloud for raw reviews:**  
+
+In the preprocessed reviews, the focus shifts to more meaningful terms like **"character"**, **"story"**, **"puzzle"**, **"graphic"** and **"experience"** highlighting the core elements of adventure games. Descriptive words such as **"great"**, **"fun"**, **"amazing"** and **"beautiful"** reflect player engagement and satisfaction, while specific terms emphasize gameplay and narrative features. The processed text eliminates noise and offers clearer insights into what players value most in adventure games.
+  
+  
+**The word cloud for preprocessed reviews:**  
+
+The analysis of raw reviews for the "Adventure" genre shows a dominance of broad terms like **"game"**, **"story"**, **"time", **"one"** and **"play"** reflecting general sentiments rather than specific insights. Frequent stop words such as **"one"**, **"really"** and **"even"** contribute to noise, diluting the relevance of meaningful terms like **"puzzle"** and **"character"**. While the raw text provides a high-level overview of player opinions, it lacks the depth needed to understand genre-specific preferences.

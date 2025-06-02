@@ -1,0 +1,21 @@
+# Start Anaconda PowerShell NOT as administrator
+
+> cd "C:/Users/Administrator/DataScientest - Game Genre Prediction (Streamlit)"
+> .game_genre_prediction_env_py310\Scripts\Activate.ps1
+> streamlit run "DataScientest - Games Sales Project - Streamlit.py"
+
+
+# Neues environment
+
+> cd "C:/Users/Administrator/DataScientest - Game Genre Prediction (Streamlit)"
+
+> py -3.10 -m venv .game_genre_prediction_env_py310
+
+# Windows Command Prompt
+> .game_genre_prediction_env_py310\Scripts\activate
+
+# Windows PowerShell
+> .\.game_genre_prediction_env_py310\Scripts\Activate.ps1
+
+> python.exe -m pip install --upgrade pip
+> pip install -r requirements.txt
