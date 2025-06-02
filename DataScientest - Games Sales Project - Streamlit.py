@@ -1243,9 +1243,9 @@ if sections == "Game Genre Prediction Demo":
 
     # ======================================================
     # Initialize a lemmatizer and Stopwords
-    # import nltk
-    # from nltk.corpus import stopwords
-    # from string import punctuation
+    import nltk
+    from nltk.corpus import stopwords
+    from string import punctuation
 
     # Versuche, 'stopwords' zu laden – lade sie bei Fehler herunter
     try:
