@@ -20,6 +20,9 @@ from sklearn.preprocessing import PolynomialFeatures
 import json
 import zipfile
 
+# Set the page layout
+st.set_page_config(page_title = "DataScientest Project - Games Sales", layout = "wide")
+
 # 📦 Ensure all  NLTK packages are available
 nltk_resources = ["stopwords", "punkt", "wordnet", "omw-1.4"]
 for res in nltk_resources:
@@ -28,9 +31,6 @@ for res in nltk_resources:
     except LookupError:
         with st.spinner(f"Lade NLTK-Daten: {res}"):
             nltk.download(res)
-
-# Set the page layout
-st.set_page_config(page_title = "DataScientest Project - Games Sales", layout = "wide")
 
 # Add an invisible anchor at the top of the page for the "Go to top" button
 st.markdown('<a id="top"></a>', unsafe_allow_html=True)
