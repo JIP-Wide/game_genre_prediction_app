@@ -69,18 +69,12 @@ You can manually enter or simulate game data and get real-time genre predictions
 | Classification model  | XGBoost with hyperparameter tuning via Optuna         |
 
 
-## App Preview
-
-![Demo Screenshot](https://link-to-your-screenshot.com/demo.png)
-
-
 ## Sample Results (Evaluation Metrics)
 
 | Metric      | Score     |
 |-------------|-----------|
 | Accuracy    | 0.9412    |
 | Log Loss    | 0.2023    |
-
 
 
 ## Credits
