@@ -21,7 +21,6 @@ import nltk
 import zipfile
 
 nltk.download('wordnet')
-nltk.download('stopwords')
 
 # Set the page layout
 st.set_page_config(page_title = "DataScientest Project - Games Sales", layout = "wide")
@@ -1064,6 +1063,8 @@ if sections == "Game Genre Prediction Demo":
 
     ##################### PREDICTION DEMO ####################
 
+    nltk.download('stopwords')
+    
     st.markdown("<div style='margin-top: 10px;'></div>", unsafe_allow_html = True)  # Adjust spacing before header for "Go to top" button
     st.header("Prediction Demo") # 5. 
     st.subheader("Demo Description")
