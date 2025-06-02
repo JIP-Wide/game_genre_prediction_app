@@ -20,7 +20,14 @@ from sklearn.preprocessing import PolynomialFeatures
 import json
 import zipfile
 
-nltk.download('wordnet')
+# 📦 Ensure all  NLTK packages are available
+nltk_resources = ["stopwords", "punkt", "wordnet", "omw-1.4"]
+for res in nltk_resources:
+    try:
+        nltk.data.find(f"corpora/{res}")
+    except LookupError:
+        with st.spinner(f"Lade NLTK-Daten: {res}"):
+            nltk.download(res)
 
 # Set the page layout
 st.set_page_config(page_title = "DataScientest Project - Games Sales", layout = "wide")
@@ -1243,19 +1250,19 @@ if sections == "Game Genre Prediction Demo":
 
     # ======================================================
     # Initialize a lemmatizer and Stopwords
-    import nltk
-    from nltk.corpus import stopwords
-    from string import punctuation
+    # import nltk
+    # from nltk.corpus import stopwords
+    # from string import punctuation
 
-    # Versuche, 'stopwords' zu laden – lade sie bei Fehler herunter
-    try:
-        stop_words = set(stopwords.words('english')).union(set(punctuation), {"game", "games", 'one'})
-    except LookupError:
-        nltk.download('stopwords')
-        stop_words = set(stopwords.words('english')).union(set(punctuation), {"game", "games", 'one'})
+    # # Versuche, 'stopwords' zu laden – lade sie bei Fehler herunter
+    # try:
+    #     stop_words = set(stopwords.words('english')).union(set(punctuation), {"game", "games", 'one'})
+    # except LookupError:
+    #     nltk.download('stopwords')
+    #     stop_words = set(stopwords.words('english')).union(set(punctuation), {"game", "games", 'one'})
 
     wordnet_lemmatizer = WordNetLemmatizer()
-    # stop_words = set(stopwords.words('english')).union(set(punctuation), {"game", "games", 'one'})
+    stop_words = set(stopwords.words('english')).union(set(punctuation), {"game", "games", 'one'})
 
     # Preprocess text reviews
     def preprocess_text(text):
