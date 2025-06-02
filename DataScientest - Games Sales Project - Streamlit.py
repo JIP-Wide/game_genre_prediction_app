@@ -10,6 +10,7 @@ from wordcloud import WordCloud, STOPWORDS
 from PIL import Image
 import os
 import re
+import nltk
 from nltk.corpus import stopwords
 from string import punctuation
 from nltk.stem import WordNetLemmatizer
@@ -17,7 +18,6 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 from sklearn.preprocessing import PolynomialFeatures
 import json
-import nltk
 import zipfile
 
 nltk.download('wordnet')
@@ -1061,10 +1061,6 @@ if sections == "Game Genre Prediction Demo":
     df_games_reviews = pd.read_csv(os.path.join(extract_dir, 'all_user_reviews_translated_preprocessed_with_games_data_streamlit.csv'))
     df_games_reviews_X_test = pd.read_csv('all_user_reviews_with_games_data_X_y_test_streamlit.csv')
 
-    ##################### PREDICTION DEMO ####################
-
-    nltk.download('stopwords')
-    
     st.markdown("<div style='margin-top: 10px;'></div>", unsafe_allow_html = True)  # Adjust spacing before header for "Go to top" button
     st.header("Prediction Demo") # 5. 
     st.subheader("Demo Description")
@@ -1247,8 +1243,19 @@ if sections == "Game Genre Prediction Demo":
 
     # ======================================================
     # Initialize a lemmatizer and Stopwords
+    # import nltk
+    # from nltk.corpus import stopwords
+    # from string import punctuation
+
+    # Versuche, 'stopwords' zu laden – lade sie bei Fehler herunter
+    try:
+        stop_words = set(stopwords.words('english')).union(set(punctuation), {"game", "games", 'one'})
+    except LookupError:
+        nltk.download('stopwords')
+        stop_words = set(stopwords.words('english')).union(set(punctuation), {"game", "games", 'one'})
+
     wordnet_lemmatizer = WordNetLemmatizer()
-    stop_words = set(stopwords.words('english')).union(set(punctuation), {"game", "games", 'one'})
+    # stop_words = set(stopwords.words('english')).union(set(punctuation), {"game", "games", 'one'})
 
     # Preprocess text reviews
     def preprocess_text(text):
