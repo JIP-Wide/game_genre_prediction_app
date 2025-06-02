@@ -21,6 +21,7 @@ import nltk
 import zipfile
 
 nltk.download('wordnet')
+nltk.download('stopwords')
 
 # Set the page layout
 st.set_page_config(page_title = "DataScientest Project - Games Sales", layout = "wide")
